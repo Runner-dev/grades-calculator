@@ -55,7 +55,7 @@
       class="bg-white dark:bg-gray-700 dark:text-white p-6 rounded-lg flex flex-col space-y-2 shadow relative"
       bind:this={gradeComponents[i]}
       in:fade={{ duration: 200 }}
-      out:fly={{
+      out:fly|local={{
         x: -200,
         duration: 200,
       }}
@@ -137,7 +137,7 @@
 </ul>
 <div class="h-32" />
 <div
-  class="fixed flex bottom-4 left-4 right-4 space-x-4 pt-20 bg-gradient-to-t from-gray-200 via-gray-200 dark:from-gray-800 dark:via-gray-800"
+  class="fixed flex bottom-0 left-0 right-0 p-4 space-x-4 pt-20 bg-gradient-to-t from-gray-200 via-gray-200 dark:from-gray-800 dark:via-gray-800"
 >
   <div
     class="flex-grow flex items-center justify-center bg-blue-400 rounded-lg shadow-lg h-12 min-w-[min-content]"
