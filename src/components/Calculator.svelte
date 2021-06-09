@@ -4,6 +4,7 @@
   import { fade, fly } from "svelte/transition";
   import { tick } from "svelte";
   import calculateMissingRequiredGrade from "../utils/calculateMissingRequiredGrade";
+  import Name from "./calculator/Name.svelte";
 
   export let grades: Array<Grade> = [];
 
@@ -50,7 +51,7 @@
 </script>
 
 <ul class="max-w-2xl px-4 mt-6 mx-auto space-y-8 z-0">
-  {#each grades as grade, i (grade.id)}
+  {#each grades as grade, i (grade.id || i)}
     <li
       class="bg-white dark:bg-gray-700 dark:text-white p-6 rounded-lg flex flex-col space-y-2 shadow relative"
       bind:this={gradeComponents[i]}
@@ -85,21 +86,8 @@
             />
           </svg>
         </button>
-        <label class="flex-grow flex-shrink-0">
-          <div class="px-2 py-1 text-sm">Nome</div>
-
-          <input
-            type="text"
-            class="bg-gray-100 shadow-sm dark:bg-gray-600 rounded p-2 w-full focus:outline-none focus:ring-4"
-            bind:value={grade.name}
-            disabled={!editable}
-          />
-        </label>
-      {:else}
-        <h2 class="flex-grow flex-shrink-0 p-2 text-xl font-bold">
-          {grade.name}
-        </h2>
       {/if}
+      <Name {editable} {grade} />
       <label class="flex-grow flex-shrink-0">
         <div class="px-2 py-1 text-sm">Nota</div>
 
@@ -127,7 +115,10 @@
           <input
             type="text"
             class="shadow-sm rounded px-2 w-full focus:outline-none focus:ring-4 bg-transparent"
-            value={`${grade.weight}%`}
+            value={`${grade.weight.toLocaleString("en-US", {
+              minimumFractionDigits: 0,
+              maximumFractionDigits: 2,
+            })}%`}
             disabled={true}
           />
         {/if}

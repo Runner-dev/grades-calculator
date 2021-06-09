@@ -43,6 +43,44 @@ const templates: Templates = {
       },
     ],
   },
+  fisica: {
+    name: "Física",
+    grades: [
+      {
+        name: "NC1",
+        weight: 25 / 3,
+        url: "https://escolamobile.instructure.com/courses/3168647/quizzes/7725216",
+      },
+      {
+        name: "NC2",
+        helper:
+          "(Multiplique a nota da dissertativa por 2 e some com a nota da parte teste)",
+        weight: 25 / 3,
+        url: "https://escolamobile.instructure.com/courses/3168647/pages/aula-26-slash-04-nc2-calorimetria",
+      },
+      {
+        name: "NC3",
+        helper:
+          "(Multiplique a nota da dissertativa por 3 e some com a nota da parte teste)",
+        weight: 25 / 3,
+        url: "https://escolamobile.instructure.com/courses/3168647/pages/aula-24-slash-05-nc3-dilatacao",
+      },
+      {
+        name: "P1",
+        weight: 15,
+        url: "https://escolamobile.instructure.com/courses/3168642/external_tools/987070",
+      },
+      {
+        name: "P2",
+        weight: 30,
+        url: "https://escolamobile.instructure.com/courses/3168642/external_tools/987070",
+      },
+      {
+        name: "P3",
+        weight: 30,
+      },
+    ],
+  },
 };
 
 export default templates;

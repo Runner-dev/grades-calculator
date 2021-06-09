@@ -3,4 +3,6 @@ export interface Grade {
   value?: number;
   weight: number;
   id?: number;
+  helper?: string;
+  url?: string;
 }

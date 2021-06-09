@@ -1,5 +1,8 @@
 <script lang="ts">
   import templates from "../templates";
+  const keys = Object.keys(templates).sort((a, b) =>
+    templates[a].name.localeCompare(templates[b].name)
+  );
 
   import Header from "../components/Header.svelte";
   import { link } from "svelte-spa-router";
@@ -8,7 +11,7 @@
 <Header name={"Pré preenchidos"} />
 
 <div class="max-w-2xl px-4 mt-6 mx-auto space-y-8 z-0">
-  {#each Object.keys(templates) as key}
+  {#each keys as key}
     <a
       href={`/${key}`}
       use:link
