@@ -3,11 +3,18 @@
 
   export let classes: string = "";
 
-  let dismissed = false;
+  export let name: string = "";
+  export let tipEnabled: boolean;
+
+  let dismissed = !!window.localStorage.getItem(`${name}-dismissed`);
+  $: {
+    if (dismissed) window.localStorage.setItem(`${name}-dismissed`, "true");
+    else window.localStorage.removeItem(`${name}-dismissed`);
+  }
 </script>
 
 <div class={`${classes} relative`}>
-  {#if !dismissed}
+  {#if !dismissed && tipEnabled}
     <div
       class="absolute px-4 py-2 bottom-full bg-gray-300 dark:bg-gray-600 dark:text-gray-300 rounded-lg text-black text-sm shadow-2xl flex items-center"
       out:fly={{

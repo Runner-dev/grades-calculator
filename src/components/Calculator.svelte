@@ -48,12 +48,6 @@
     });
   }
 
-  const firstTime = !window.localStorage.getItem("visited");
-
-  onMount(() => {
-    if (firstTime) window.localStorage.setItem("visited", "true");
-  });
-
   const firstUrlGrade = grades.reduce<number>((prev, grade, i) => {
     if (prev !== -1) return prev;
     if (grade.url) return i;
@@ -102,12 +96,7 @@
           </svg>
         </button>
       {/if}
-      <Name
-        {editable}
-        {grade}
-        {firstTime}
-        displayHelper={firstUrlGrade === i}
-      />
+      <Name {editable} {grade} displayHelper={firstUrlGrade === i} />
       <label class="flex-grow flex-shrink-0">
         <div class="px-2 py-1 text-sm">Nota</div>
 

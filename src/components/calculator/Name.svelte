@@ -3,11 +3,10 @@
   import Link from "./name/Link.svelte";
   import Normal from "./name/Normal.svelte";
 
-  import Tooltip from "../NameTooltip.svelte";
+  import Tooltip from "../Tooltip.svelte";
 
   export let grade: Grade;
   export let editable: boolean;
-  export let firstTime: boolean;
   export let displayHelper: boolean;
 </script>
 
@@ -25,17 +24,12 @@
     </label>
   {:else}
     {#if grade.url}
-      {#if firstTime && displayHelper}
-        <Tooltip>
-          <svelte:fragment slot="tip"
-            >Clique no nome quando ele estiver azul para abrir diretamente a
-            prova</svelte:fragment
-          >
-          <Link slot="content" {grade} />
-        </Tooltip>
-      {:else}
-        <Link {grade} />
-      {/if}
+      <Tooltip name="name" tipEnabled={displayHelper}>
+        <svelte:fragment slot="tip"
+          >Clique no nome quando ele estiver azul para abrir diretamente a prova</svelte:fragment
+        >
+        <Link slot="content" {grade} />
+      </Tooltip>
     {:else}
       <Normal {grade} />
     {/if}
