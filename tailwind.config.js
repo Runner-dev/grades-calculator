@@ -1,7 +1,7 @@
 module.exports = {
   mode: "jit",
   purge: ["./public/index.html", "./src/**/*.{js,jsx,ts,tsx,vue,svelte}"],
-  darkMode: process.env.MODE === "production" ? "media" : "class",
+  darkMode: "media",
   theme: {
     flexGrow: {
       0: 0,

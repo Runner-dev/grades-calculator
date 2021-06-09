@@ -1,6 +1,6 @@
 export interface Grade {
   name?: string;
-  value: number;
+  value: number | undefined;
   weight: number;
   id?: number;
 }
