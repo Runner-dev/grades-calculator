@@ -10,7 +10,7 @@
 
 <Header name={"Pré preenchidos"} />
 
-<div class="max-w-2xl px-4 mt-6 mx-auto space-y-8 z-0">
+<div class="max-w-2xl px-4 mt-6 mx-auto space-y-8 z-0 mb-8">
   {#each keys as key}
     <a
       href={`/${key}`}

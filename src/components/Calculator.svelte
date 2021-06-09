@@ -2,7 +2,7 @@
   import type { Grade } from "src/types/grades";
   import calculateAverage from "../utils/calculateAverage";
   import { fade, fly } from "svelte/transition";
-  import { tick } from "svelte";
+  import { onMount, tick } from "svelte";
   import calculateMissingRequiredGrade from "../utils/calculateMissingRequiredGrade";
   import Name from "./calculator/Name.svelte";
 
@@ -17,7 +17,6 @@
   if (gradeIds.length > 0) {
     idCounter = Math.max(...gradeIds) + 1;
   }
-  console.log(idCounter);
 
   let gradeComponents: HTMLLIElement[] = [];
   let scrollToLatest = false;
@@ -48,6 +47,18 @@
       }
     });
   }
+
+  const firstTime = !window.localStorage.getItem("visited");
+
+  onMount(() => {
+    if (firstTime) window.localStorage.setItem("visited", "true");
+  });
+
+  const firstUrlGrade = grades.reduce<number>((prev, grade, i) => {
+    if (prev !== -1) return prev;
+    if (grade.url) return i;
+    return prev;
+  }, -1);
 </script>
 
 <ul class="max-w-2xl px-4 mt-6 mx-auto space-y-8 z-0">
@@ -55,10 +66,14 @@
     <li
       class="bg-white dark:bg-gray-700 dark:text-white p-6 rounded-lg flex flex-col space-y-2 shadow relative"
       bind:this={gradeComponents[i]}
-      in:fade={{ duration: 200 }}
+      in:fade={{
+        duration: 500,
+        easing: (t) => t * (2 - t),
+      }}
       out:fly|local={{
         x: -200,
-        duration: 200,
+        duration: 500,
+        easing: (t) => t * (2 - t),
       }}
     >
       {#if editable}
@@ -87,7 +102,12 @@
           </svg>
         </button>
       {/if}
-      <Name {editable} {grade} />
+      <Name
+        {editable}
+        {grade}
+        {firstTime}
+        displayHelper={firstUrlGrade === i}
+      />
       <label class="flex-grow flex-shrink-0">
         <div class="px-2 py-1 text-sm">Nota</div>
 
@@ -96,6 +116,8 @@
           class="bg-gray-100 shadow-sm dark:bg-gray-600 rounded p-2 w-full focus:outline-none focus:ring-4"
           bind:value={grade.value}
           placeholder={missing.toString()}
+          min="0"
+          max="10"
         />
       </label>
       <!-- svelte-ignore a11y-label-has-associated-control -->
@@ -110,6 +132,8 @@
             class="bg-gray-100 shadow-sm dark:bg-gray-600 rounded p-2 w-full focus:outline-none focus:ring-4 disabled:bg-transparent disabled:py-0"
             bind:value={grade.weight}
             disabled={!editable}
+            max={100 - weightSum + grade.weight}
+            min="0"
           />
         {:else}
           <input

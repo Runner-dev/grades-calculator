@@ -1,5 +1,6 @@
 <script lang="ts">
   import { link } from "svelte-spa-router";
+  import links from "../links";
 
   export let name = "Calculadora de notas";
 
@@ -14,20 +15,15 @@
   >
     {name}
   </h1>
-  <a
-    class="pointer-events-auto text-green-500 text-2xl text-center h-full py-4 px-8 hover:bg-gray-400 dark:hover:bg-gray-600 hidden md:block"
-    href="/"
-    use:link
-  >
-    Início
-  </a>
-  <a
-    class="pointer-events-auto text-green-500 text-2xl text-center h-full py-4 px-8 hover:bg-gray-400 dark:hover:bg-gray-600 hidden md:block"
-    href="/filled"
-    use:link
-  >
-    Pré preeenchidos
-  </a>
+  {#each links as [href, name]}
+    <a
+      class="pointer-events-auto text-green-500 text-2xl text-center h-full py-4 px-8 hover:bg-gray-400 dark:hover:bg-gray-600 hidden md:block"
+      {href}
+      use:link
+    >
+      {name}
+    </a>
+  {/each}
   <button
     class="md:hidden p-4 pointer-events-auto h-full"
     on:click={() => (menuVisible = true)}
@@ -50,8 +46,8 @@
   </button>
 </header>
 <div
-  class={`fixed top-0 bottom-0 left-0 right-0 z-50 bg-gray-200 transform md:hidden transition-transform flex flex-col items-center justify-center dark:bg-gray-700 ${
-    menuVisible ? "translate-x-0" : " translate-x-[100vw]"
+  class={`fixed top-0 bottom-0 left-0 right-0 z-50 bg-gray-200 transform md:hidden transition-transform duration-500 flex flex-col items-center justify-center dark:bg-gray-700 ${
+    menuVisible ? "translate-x-0 ease-out " : " translate-x-[100vw] ease-in"
   }`}
 >
   <button
@@ -76,26 +72,18 @@
   </button>
 
   <div class="flex flex-col">
-    <a
-      class="pointer-events-auto text-green-700 text-2xl text-center h-full py-4 px-8 "
-      href="/"
-      use:link
-      on:click={() => {
-        menuVisible = false;
-      }}
-    >
-      Início
-    </a>
-    <a
-      class="pointer-events-auto text-green-700 text-2xl text-center h-full py-4 px-8 "
-      href="/filled"
-      use:link
-      on:click={() => {
-        menuVisible = false;
-      }}
-    >
-      Pré preeenchidos
-    </a>
+    {#each links as [href, name]}
+      <a
+        class="pointer-events-auto text-green-700 dark:text-green-400 text-2xl text-center h-full py-4 px-8 "
+        {href}
+        use:link
+        on:click={() => {
+          menuVisible = false;
+        }}
+      >
+        {name}
+      </a>
+    {/each}
   </div>
 </div>
 
