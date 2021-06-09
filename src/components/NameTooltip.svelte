@@ -12,8 +12,7 @@
       class="absolute px-4 py-2 bottom-full bg-gray-300 dark:bg-gray-600 dark:text-gray-300 rounded-lg text-black text-sm shadow-2xl flex items-center"
       out:fly={{
         x: -25,
-        y: -10,
-        duration: 500,
+        duration: 200,
         easing: (t) => t * (2 - t),
       }}
     >
