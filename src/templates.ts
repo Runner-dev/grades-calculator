@@ -19,11 +19,7 @@ const templates: Templates = {
       {
         name: "LT 2",
         url: "https://escolamobile.instructure.com/courses/3168644/pages/01-slash-06-aula-30-lt-2?module_item_id=72241352",
-        weight: 10,
-      },
-      {
-        name: "LT 3",
-        weight: 7,
+        weight: 17,
       },
       {
         name: "P1",
@@ -223,7 +219,12 @@ const templates: Templates = {
         weight: 8,
         url: "https://escolamobile.instructure.com/courses/3168649/assignments/32478249/submissions/7884899",
       },
-      { name: "NC3", weight: 9 },
+      {
+        name: "NC3",
+        weight: 9,
+        helper: "(Em grupos)",
+        url: "https://escolamobile.instructure.com/courses/3168649/pages/aula-42-31-slash-05-historia-fim-do-imperio-romano?module_item_id=72319283",
+      },
       {
         name: "P1",
         weight: 15,
@@ -273,6 +274,7 @@ const templates: Templates = {
     grades: [
       {
         name: "AA1",
+        helper: "(Dissertativa * 0.7 + testes)",
         weight: 10,
         url: "https://escolamobile.instructure.com/courses/3168652/pages/aula-de-algebra-24-de-fevereiro-atividade-avaliativa-01?module_item_id=69428418s",
       },
@@ -315,7 +317,7 @@ const templates: Templates = {
       {
         name: "NC2",
         weight: 5,
-        url: "https://escolamobile.instructure.com/courses/3168654/pages/aula-15-25-slash-03-atividade-de-separacao-de-misturas-nota-de-classe?module_item_id=70513439",
+        url: "https://escolamobile.instructure.com/courses/3168654/pages/aula-21-22-slash-04-leis-ponderais?module_item_id=71444141",
       },
       {
         name: "NC3",
