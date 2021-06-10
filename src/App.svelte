@@ -13,7 +13,7 @@
     "/": Home,
     "/custom": Custom,
     "/filled": TemplatesList,
-    "/:templateId": Template,
+    "/:section/:templateId": Template,
   };
 
   const firebaseConfig = {
