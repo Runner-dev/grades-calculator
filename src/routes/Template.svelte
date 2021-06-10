@@ -2,10 +2,15 @@
   import templates from "../templates";
   import Calculator from "../components/Calculator.svelte";
   import Header from "../components/Header.svelte";
-  import { afterUpdate } from "svelte";
+  import { logEvent, getAnalytics } from "firebase/analytics";
+  import isDev from "../utils/isDev";
+
   export let params: any;
 
   let templateId = params.templateId;
+
+  if (!isDev())
+    logEvent(getAnalytics(), "view_template", { templateName: templateId });
 
   let template = templates[templateId];
   let dataString = localStorage.getItem(`grades-${templateId}`);

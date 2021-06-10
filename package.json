@@ -7,6 +7,7 @@
   },
   "dependencies": {
     "autoprefixer": "^10.2.6",
+    "firebase": "^9.0.0-beta.2",
     "rollup-plugin-svelte": "^7.1.0",
     "svelte": "^3.37.0",
     "svelte-hmr": "^0.14.4",

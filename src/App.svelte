@@ -4,6 +4,10 @@
   import Home from "./routes/Home.svelte";
   import Template from "./routes/Template.svelte";
   import TemplatesList from "./routes/TemplatesList.svelte";
+  import { initializeApp } from "firebase/app";
+  import { getAnalytics } from "firebase/analytics";
+  import { getPerformance } from "firebase/performance";
+  import isDev from "./utils/isDev";
 
   const routes = {
     "/": Home,
@@ -11,6 +15,21 @@
     "/filled": TemplatesList,
     "/:templateId": Template,
   };
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyDYvLM0o4QfD4OwD77BavJznJ10QYl4gh0",
+    authDomain: "mobile-grades-calculator.firebaseapp.com",
+    projectId: "mobile-grades-calculator",
+    storageBucket: "mobile-grades-calculator.appspot.com",
+    messagingSenderId: "537652042736",
+    appId: "1:537652042736:web:24c20b2cf2e8cb22b4db35",
+    measurementId: "G-RQCJ5KNTXV",
+  };
+  if (!isDev()) {
+    const firebaseApp = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(firebaseApp);
+    const performance = getPerformance(firebaseApp);
+  }
 </script>
 
 <Router restoreScrollState={true} {routes} />
