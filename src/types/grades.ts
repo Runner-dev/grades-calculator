@@ -5,5 +5,4 @@ export interface Grade {
   id?: number;
   helper?: string;
   url?: string;
-  multiplier?: number;
 }
