@@ -112,7 +112,6 @@ const templates: Templates = {
   espanhol: {
     name: "Espanhol",
     grades: [
-      // espanhol
       {
         name: "Sondeo 1 (EC)",
         helper: "0-10",
@@ -137,7 +136,11 @@ const templates: Templates = {
         url: "https://escolamobile.instructure.com/courses/3187010/assignments/32090475/submissions/7884899",
       },
       { name: "Interacción Oral Periódica", weight: 5 },
-      { name: "Video Ponencia", weight: 10 },
+      {
+        name: "Video Ponencia",
+        weight: 10,
+        url: "https://escolamobile.instructure.com/courses/3187009/assignments/32418541",
+      },
       {
         name: "P1",
         weight: 15,
