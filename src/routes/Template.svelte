@@ -9,6 +9,8 @@
 
   let templateId = params.templateId;
 
+  console.log(templateId);
+
   if (!isDev())
     logEvent(getAnalytics(), "view_template", { templateName: templateId });
 
