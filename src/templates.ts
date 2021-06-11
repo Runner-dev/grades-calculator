@@ -379,3 +379,5 @@ const templates: Templates = {
     ],
   },
 };
+
+export default templates;
