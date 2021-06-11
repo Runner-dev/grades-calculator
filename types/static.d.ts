@@ -58,4 +58,6 @@ declare module "*.png" {
 
 /* CUSTOM: ADD YOUR OWN HERE */
 
+declare module "*.svelte";
+
 declare var __SNOWPACK_ENV__: any;
