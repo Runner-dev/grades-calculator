@@ -80,7 +80,6 @@ const templates: Templates = {
     grades: [
       {
         name: "NC 1",
-
         weight: 10,
         url: "https://escolamobile.instructure.com/courses/3168641/pages/aula-12-05-slash-03-biologia?module_item_id=69653776",
       },

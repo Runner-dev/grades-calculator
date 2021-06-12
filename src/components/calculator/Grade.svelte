@@ -17,6 +17,7 @@
   export let missing: number;
   export let weightSum: number;
   export let index: number;
+  export let multiplier: number = 1;
 </script>
 
 <li
@@ -34,7 +35,6 @@
 >
   {#if editable}
     <button
-      data-testid="delete-button"
       on:click={onDelete}
       class="absolute right-8 fill-current hover:text-red-500 active:text-red-700 active:outline-none focus:outline-none"
       ><svg
@@ -58,7 +58,6 @@
     <div class="px-2 py-1 text-sm">Nota</div>
 
     <input
-      data-testid="value-input"
       type="number"
       class="bg-gray-100 shadow-sm dark:bg-gray-600 rounded p-2 w-full focus:outline-none focus:ring-4"
       bind:value={grade.value}
@@ -75,7 +74,6 @@
 
     {#if editable}
       <input
-        data-testid="editable-input"
         type="number"
         class="bg-gray-100 shadow-sm dark:bg-gray-600 rounded p-2 w-full focus:outline-none focus:ring-4 disabled:bg-transparent disabled:py-0"
         bind:value={grade.weight}
@@ -85,7 +83,6 @@
       />
     {:else}
       <input
-        data-testid="noteditable-input"
         type="text"
         class="shadow-sm rounded px-2 w-full focus:outline-none focus:ring-4 bg-transparent"
         value={`${grade.weight.toLocaleString("en-US", {
