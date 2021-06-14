@@ -28,9 +28,9 @@
   import TemplateSection from "../components/TemplateSection.svelte";
 </script>
 
-<Header name={"Pré preenchidos"} />
+<Header />
 
-<div class="max-w-2xl px-4 mt-6 mx-auto space-y-8 z-0 mb-8">
+<div class="max-w-4xl px-4 mx-auto space-y-8 z-0 mb-8">
   {#each sections as section}
     <TemplateSection {section} />
   {/each}

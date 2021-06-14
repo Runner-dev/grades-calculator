@@ -24,7 +24,7 @@
 
 <div>
   <button
-    class={`text-xl font-bold flex items-center justify-start p-6 bg-gray-100 dark:bg-gray-700 dark:text-white dark:hover:text-gray-400 w-full rounded-lg shadow-xl hover:text-gray-500 ring-white active:ring focus:ring focus:outline-none active:outline-none`}
+    class={`text-xl font-bold flex items-center justify-start p-6 bg-gray-100 dark:bg-gray-700 dark:text-white dark:hover:text-gray-400 w-full rounded-md shadow-xl hover:text-gray-500 ring-white active:ring focus:ring focus:outline-none active:outline-none`}
     on:click={() => (extended = !extended)}
   >
     <svg
@@ -32,7 +32,7 @@
       fill="none"
       viewBox="0 0 24 24"
       stroke="currentColor"
-      class={`h-6 w-6 transform transition duration-500 mr-2  ${
+      class={`h-6 w-6 transform transition duration-500 mr-2 z-0  ${
         extended ? "-rotate-90" : ""
       }`}
     >
@@ -56,7 +56,7 @@
       <a
         href={`/${section.key}/${key}`}
         use:link
-        class={`bg-white p-6 block rounded-lg hover:bg-gray-100 transtion shadow dark:bg-gray-600 dark:text-white dark:hover:bg-gray-500 cursor-pointer ${
+        class={`bg-white p-6 block rounded-md hover:bg-gray-100 transtion shadow dark:bg-gray-600 dark:text-white dark:hover:bg-gray-500 cursor-pointer ${
           i === 0 ? "mt-8" : ""
         }`}
       >

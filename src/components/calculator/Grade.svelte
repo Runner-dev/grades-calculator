@@ -20,7 +20,7 @@
 </script>
 
 <li
-  class="bg-white dark:bg-gray-700 dark:text-white p-6 rounded-lg flex flex-col space-y-2 shadow relative"
+  class="bg-white dark:bg-gray-700 dark:text-white p-6 rounded-sm flex flex-col space-y-2 shadow relative"
   bind:this={component}
   in:fade={{
     duration: 500,
@@ -36,10 +36,11 @@
     <button
       data-testid="delete-button"
       on:click={onDelete}
-      class="absolute right-8 fill-current hover:text-red-500 active:text-red-700 active:outline-none focus:outline-none"
-      ><svg
+      class="absolute right-8 fill-current hover:text-gray-400 active:text-gray-800 active:outline-none focus:outline-none"
+    >
+      <svg
         xmlns="http://www.w3.org/2000/svg"
-        class="h-6 w-6"
+        class="w-6"
         fill="none"
         viewBox="0 0 24 24"
         stroke="currentColor"
@@ -48,7 +49,7 @@
           stroke-linecap="round"
           stroke-linejoin="round"
           stroke-width="2"
-          d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"
+          d="M6 18L18 6M6 6l12 12"
         />
       </svg>
     </button>

@@ -64,7 +64,7 @@
   }, -1);
 </script>
 
-<ul class="max-w-2xl px-4 mt-6 mx-auto space-y-8 z-0">
+<ul class="max-w-4xl px-4 mt-6 mx-auto space-y-8 z-0">
   {#each grades as grade, i (grade.id || i)}
     <GradeComponent
       on:delete={() => onDelete(i)}
@@ -80,16 +80,16 @@
 </ul>
 <div class="h-32" />
 <div
-  class="fixed flex bottom-0 left-0 right-0 p-4 space-x-4 pt-20 bg-gradient-to-t from-gray-200 via-gray-200 dark:from-gray-800 dark:via-gray-800"
+  class="fixed flex bottom-0 left-0 right-0 p-4 space-x-4 py-5 dark:bg-gray-900 bg-gray-300 items-center"
 >
   <div
-    class="flex-grow flex items-center justify-center bg-blue-400 rounded-lg shadow-lg h-12 min-w-[min-content]"
+    class="flex-grow flex items-center justify-center bg-gray-100 dark:bg-gray-800 dark:text-white rounded-md h-12 shadow-sm min-w-[min-content] font-semibold"
   >
     Média: {average}
   </div>
   {#if weightSum !== 100}
     <div
-      class="flex-grow flex items-center justify-center bg-purple-400 rounded-lg shadow-lg h-12 min-w-[min-content]"
+      class="flex-grow flex items-center justify-center bg-gray-100 dark:bg-gray-800 dark:text-white text-black rounded-md shadow-sm h-12 min-w-[min-content] font-semibold"
     >
       Nota faltante: {missing}
     </div>
@@ -98,7 +98,7 @@
     <button
       class={`${
         weightSum !== 100 ? "flex-grow-2" : "flex-grow"
-      } flex items-center justify-center bg-green-400 rounded-lg shadow-lg h-12 min-w-[min-content]`}
+      } flex items-center justify-center bg-blue-500 dark:bg-blue-700 text-white font-semibold rounded-md shadow-lg h-12 min-w-[min-content] hover:bg-blue-600 dark:hover:bg-blue-800 transition-colors`}
       on:click={() => {
         grades = [
           ...grades,
