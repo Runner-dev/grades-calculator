@@ -8,6 +8,7 @@
   import isDev from "./utils/isDev";
   import Popup from "./components/Popup.svelte";
   import Templates from "./routes/Templates.svelte";
+  import Popup from "./components/Popup.svelte";
 
   const routes = {
     "/": Templates,
