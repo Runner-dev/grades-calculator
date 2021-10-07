@@ -30,4 +30,5 @@
   }
 </script>
 
+<Popup />
 <Router restoreScrollState={true} {routes} />
