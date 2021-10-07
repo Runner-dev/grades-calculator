@@ -8,6 +8,7 @@
   import { getAnalytics } from "firebase/analytics";
   import { getPerformance } from "firebase/performance";
   import isDev from "./utils/isDev";
+  import Popup from "./components/Popup.svelte";
 
   const routes = {
     "/": Home,
@@ -32,4 +33,5 @@
   }
 </script>
 
+<Popup />
 <Router restoreScrollState={true} {routes} />
