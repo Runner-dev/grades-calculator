@@ -8,14 +8,13 @@
   export let params: any;
 
   let templateId = params.templateId;
-  let section = params.section;
 
   console.log(templateId);
 
   if (!isDev())
     logEvent(getAnalytics(), "view_template", { templateName: templateId });
 
-  let template = templates[section].subjects[templateId];
+  let template = templates[templateId];
   let dataString = localStorage.getItem(`grades-${templateId}`);
 
   if (dataString) {
