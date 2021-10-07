@@ -1,4 +1,4 @@
 export default [
-  ["/filled", "Pré Preenchidos"],
+  ["/", "Pré Preenchidos"],
   ["/custom", "Customizado"],
 ];
