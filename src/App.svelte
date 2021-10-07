@@ -3,17 +3,17 @@
   import Custom from "./routes/Custom.svelte";
   import Home from "./routes/Home.svelte";
   import Template from "./routes/Template.svelte";
-  import TemplatesList from "./routes/TemplatesList.svelte";
   import { initializeApp } from "firebase/app";
   import { getAnalytics } from "firebase/analytics";
   import { getPerformance } from "firebase/performance";
   import isDev from "./utils/isDev";
+  import Templates from "./routes/Templates.svelte";
 
   const routes = {
     "/": Home,
     "/custom": Custom,
-    "/filled": TemplatesList,
-    "/:section/:templateId": Template,
+    "/filled": Templates,
+    "/:templateId": Template,
   };
 
   const firebaseConfig = {
