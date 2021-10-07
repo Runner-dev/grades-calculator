@@ -7,5 +7,5 @@
   {#if label}
     <div class="px-2 py-1 text-sm">{label}</div>
   {/if}
-  <input type="text" class="bg-gray-200 rounded p-2 w-full" bind:value />
+  <input type="text" class="bg-gray-100 rounded p-2 w-full" bind:value />
 </label>

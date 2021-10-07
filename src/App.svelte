@@ -1,18 +1,16 @@
 <script lang="ts">
   import Router from "svelte-spa-router";
   import Custom from "./routes/Custom.svelte";
-  import Home from "./routes/Home.svelte";
   import Template from "./routes/Template.svelte";
-  import TemplatesList from "./routes/TemplatesList.svelte";
   import { initializeApp } from "firebase/app";
   import { getAnalytics } from "firebase/analytics";
   import { getPerformance } from "firebase/performance";
   import isDev from "./utils/isDev";
+  import Templates from "./routes/Templates.svelte";
 
   const routes = {
-    "/": Home,
+    "/": Templates,
     "/custom": Custom,
-    "/filled": TemplatesList,
     "/:templateId": Template,
   };
 
