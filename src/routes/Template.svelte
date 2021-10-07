@@ -9,13 +9,11 @@
 
   let templateId = params.templateId;
 
-  console.log(templateId);
-
   if (!isDev())
     logEvent(getAnalytics(), "view_template", { templateName: templateId });
 
   let template = templates[templateId];
-  let dataString = localStorage.getItem(`grades-${templateId}`);
+  let dataString = localStorage.getItem(`grades-${templateId}-2sem`);
 
   if (dataString) {
     const data = JSON.parse(dataString);
@@ -26,8 +24,11 @@
     }));
   }
 
+  console.log(template.grades.map((grade) => grade.value));
+  console.log(localStorage.getItem(`grades-${templateId}-2sem`));
+
   $: localStorage.setItem(
-    `grades-${templateId}`,
+    `grades-${templateId}-2sem`,
     JSON.stringify(template.grades.map((grade) => grade.value))
   );
 </script>
