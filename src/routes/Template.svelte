@@ -8,12 +8,15 @@
   export let params: any;
 
   let templateId = params.templateId;
+  let dataString = localStorage.getItem(`grades-${templateId}-2sem`);
 
   if (!isDev())
-    logEvent(getAnalytics(), "view_template", { templateName: templateId });
+    logEvent(getAnalytics(), "view_template", {
+      templateName: templateId,
+      firstView: !dataString,
+    });
 
   let template = templates[templateId];
-  let dataString = localStorage.getItem(`grades-${templateId}-2sem`);
 
   if (dataString) {
     const data = JSON.parse(dataString);
