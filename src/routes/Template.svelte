@@ -36,6 +36,6 @@
   );
 </script>
 
-<Header name={template.name} />
+<Header />
 
 <Calculator editable={false} bind:grades={template.grades} />
