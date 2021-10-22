@@ -1,17 +1,17 @@
 <script lang="ts">
-  let popupViewed = !!window.localStorage.getItem("popup");
+  let popupViewed = !!window.localStorage.getItem("popup-2");
 
   $: {
-    localStorage.setItem("popup", popupViewed ? "a" : "");
+    localStorage.setItem("popup-2", popupViewed ? "a" : "");
   }
 </script>
 
 {#if !popupViewed}
   <div
-    class="flex justify-center pointer-events-none fixed top-0 left-0 right-0 bottom-0 z-50 bg-white dark:bg-black dark:text-white "
+    class="flex justify-center pointer-events-none fixed top-0 left-0 h-screen w-screen z-50 bg-white dark:bg-black dark:text-white "
   >
     <div
-      class="p-8 pointer-events-auto flex flex-col space-y-4 max-w-[700px] h-full"
+      class="py-4 px-2 md:p-8 pointer-events-auto flex flex-col space-y-4 max-w-[700px] h-full"
     >
       <button class="self-end" on:click={() => (popupViewed = true)}>
         <svg
@@ -29,20 +29,16 @@
           />
         </svg></button
       >
-      <p class="text-justify">
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla quisquam
-        similique recusandae aperiam enim placeat vero, dicta commodi atque quia
-        fugit consequuntur labore quas sit. Aut eos quibusdam omnis, quia
-        aspernatur quae sunt harum ratione quisquam cupiditate praesentium
-        sapiente est impedit facilis molestiae amet dolores iusto mollitia sint
-        eaque vitae sed veritatis at. Beatae distinctio ad aperiam, cumque quod
-        neque nisi officiis consequuntur reprehenderit nam est delectus
-        exercitationem eos minus voluptatum, quaerat vitae dolore libero?
-        Praesentium labore quis, architecto optio laborum ratione explicabo unde
-        perferendis eaque saepe maxime laboriosam distinctio! Ea delectus
-        ratione officia quibusdam similique quaerat necessitatibus earum
-        aspernatur?
-      </p>
+      <div class="text-justify overflow-auto px-4 space-y-2">
+        <p>
+          O aplicativo já está com os pesos atualizados. Mesmo o sistema de
+          cálculo de média, sendo bom para ter uma ideia de quanto você precisa
+          tirar, não recomendo se basear exatamente nessa nota. Por agora não
+          vou considerar a possibilidade de arredondamento até conseguir
+          conversar com a coordenação sobre isso. Assim que conversar vou
+          colocar outra mensagem desse tipo e mandar no grupo do ano.
+        </p>
+      </div>
     </div>
   </div>
 {/if}
