@@ -7,6 +7,7 @@
   import { getPerformance } from "firebase/performance";
   import isDev from "./utils/isDev";
   import Templates from "./routes/Templates.svelte";
+  import Popup from "./components/Popup.svelte";
 
   const routes = {
     "/": Templates,
@@ -30,4 +31,5 @@
   }
 </script>
 
+<Popup />
 <Router restoreScrollState={true} {routes} />
