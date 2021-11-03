@@ -1,8 +1,5 @@
 /** @type {import("snowpack").SnowpackUserConfig } */
 export default {
-  packageOptions: {
-    knownEntrypoints: ["svelte/store"],
-  },
   mount: {
     public: { url: "/", static: true },
     src: { url: "/dist" },
@@ -48,7 +45,7 @@ export default {
     // "bundle": true,
   },
   packageOptions: {
-    /* ... */
+    knownEntrypoints: ["svelte/store"],
   },
 
   devOptions: {
