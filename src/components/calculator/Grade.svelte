@@ -10,6 +10,7 @@
     dispatch("delete");
   }
 
+  let inputValue: string = "";
   export let component: HTMLLIElement;
   export let editable = true;
   export let grade: Grade;
@@ -17,6 +18,11 @@
   export let missing: number;
   export let weightSum: number;
   export let index: number;
+
+  $: {
+    let float = parseFloat(inputValue.replace(",", "."));
+    grade.value = isNaN(float) ? undefined : float;
+  }
 </script>
 
 <li
@@ -60,9 +66,9 @@
 
     <input
       data-testid="value-input"
-      type="number"
+      type="text"
       class="bg-gray-100 shadow-sm dark:bg-gray-600 rounded p-2 w-full focus:outline-none focus:ring-4"
-      bind:value={grade.value}
+      bind:value={inputValue}
       placeholder={missing.toString()}
       min="0"
       max="10"
@@ -89,7 +95,7 @@
         data-testid="noteditable-input"
         type="text"
         class="shadow-sm rounded px-2 w-full focus:outline-none focus:ring-4 bg-transparent"
-        value={`${grade.weight.toLocaleString("en-US", {
+        value={`${grade.weight.toLocaleString("pt-BR", {
           minimumFractionDigits: 0,
           maximumFractionDigits: 2,
         })}%`}

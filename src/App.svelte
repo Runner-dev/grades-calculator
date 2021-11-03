@@ -6,6 +6,7 @@
   import { getAnalytics } from "firebase/analytics";
   import { getPerformance } from "firebase/performance";
   import isDev from "./utils/isDev";
+  import Popup from "./components/Popup.svelte";
   import Templates from "./routes/Templates.svelte";
   import Popup from "./components/Popup.svelte";
 
