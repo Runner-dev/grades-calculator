@@ -24,6 +24,7 @@ const templates: Templates = {
       {
         name: "NC2",
         weight: 5,
+        url: "https://escolamobile.instructure.com/courses/3168642/external_tools/1079745",
       },
       {
         name: "P2",
@@ -56,6 +57,7 @@ const templates: Templates = {
       {
         name: "NC2",
         weight: 5,
+        url: "https://escolamobile.instructure.com/courses/3168642/external_tools/1079745",
       },
       {
         name: "P2",
@@ -88,6 +90,7 @@ const templates: Templates = {
       {
         name: "NC2",
         weight: 5,
+        url: "https://escolamobile.instructure.com/courses/3168642/external_tools/1079745",
       },
       {
         name: "P2",
@@ -118,21 +121,22 @@ const templates: Templates = {
         url: "https://escolamobile.instructure.com/courses/3168642/external_tools/1079745",
       },
       {
+        name: "NC2 (EOLP)",
+        weight: 15,
+        url: "https://escolamobile.instructure.com/courses/3168642/external_tools/1079745",
+      },
+      {
         name: "P2",
         weight: 20,
         url: "https://escolamobile.instructure.com/courses/3168642/external_tools/1079745",
       },
       {
-        name: "P3",
-        weight: 20,
-      },
-      {
-        name: "NC2 (EOLP)",
-        weight: 15,
-      },
-      {
         name: "NC3 (Ponencia)",
         weight: 15,
+      },
+      {
+        name: "P3",
+        weight: 20,
       },
       {
         name: "IOP",
@@ -155,13 +159,14 @@ const templates: Templates = {
         url: "https://escolamobile.instructure.com/courses/3168642/external_tools/1079745",
       },
       {
-        name: "P2 (Redação)",
-        weight: 25,
+        name: "AC2",
+        weight: 5,
         url: "https://escolamobile.instructure.com/courses/3168642/external_tools/1079745",
       },
       {
-        name: "AC2",
-        weight: 5,
+        name: "P2 (Redação)",
+        weight: 25,
+        url: "https://escolamobile.instructure.com/courses/3168642/external_tools/1079745",
       },
       {
         name: "P3",
@@ -185,6 +190,7 @@ const templates: Templates = {
       {
         name: "NC2",
         weight: 5,
+        url: "https://escolamobile.instructure.com/courses/3168642/external_tools/1079745",
       },
       {
         name: "P2",
@@ -217,6 +223,7 @@ const templates: Templates = {
       {
         name: "NC2",
         weight: 5,
+        url: "https://escolamobile.instructure.com/courses/3168642/external_tools/1079745",
       },
       {
         name: "P2",
@@ -287,6 +294,7 @@ const templates: Templates = {
       {
         name: "NC2",
         weight: 5,
+        url: "https://escolamobile.instructure.com/courses/3168642/external_tools/1079745",
       },
       {
         name: "P2",
