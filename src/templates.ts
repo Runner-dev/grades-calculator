@@ -24,15 +24,12 @@ const templates: Templates = {
       {
         name: "NC2",
         weight: 5,
-        url: "https://escolamobile.instructure.com/courses/3168644/assignments/34474086",
+        url: "https://escolamobile.instructure.com/courses/3168642/external_tools/1079745",
       },
       {
-        name: "P2 - Teste",
-        weight: 9,
-      },
-      {
-        name: "P2 - Dissertativa",
-        weight: 21,
+        name: "P2",
+        weight: 30,
+        url: "https://escolamobile.instructure.com/courses/3168642/external_tools/1079745",
       },
       {
         name: "NC3",
@@ -60,14 +57,12 @@ const templates: Templates = {
       {
         name: "NC2",
         weight: 5,
+        url: "https://escolamobile.instructure.com/courses/3168642/external_tools/1079745",
       },
       {
-        name: "P2 - Teste",
-        weight: 9,
-      },
-      {
-        name: "P2 - Dissertativa",
-        weight: 21,
+        name: "P2",
+        weight: 30,
+        url: "https://escolamobile.instructure.com/courses/3168642/external_tools/1079745",
       },
       {
         name: "NC3",
@@ -94,16 +89,13 @@ const templates: Templates = {
       },
       {
         name: "NC2",
-        url: "https://escolamobile.instructure.com/courses/3168641/assignments/34592398",
         weight: 5,
+        url: "https://escolamobile.instructure.com/courses/3168642/external_tools/1079745",
       },
       {
-        name: "P2 - Teste",
-        weight: 9,
-      },
-      {
-        name: "P2 - Dissertativa",
-        weight: 21,
+        name: "P2",
+        weight: 30,
+        url: "https://escolamobile.instructure.com/courses/3168642/external_tools/1079745",
       },
       {
         name: "NC3",
@@ -129,20 +121,22 @@ const templates: Templates = {
         url: "https://escolamobile.instructure.com/courses/3168642/external_tools/1079745",
       },
       {
-        name: "P2",
-        weight: 20,
-      },
-      {
-        name: "P3",
-        weight: 20,
-      },
-      {
         name: "NC2 (EOLP)",
         weight: 15,
+        url: "https://escolamobile.instructure.com/courses/3168642/external_tools/1079745",
+      },
+      {
+        name: "P2",
+        weight: 20,
+        url: "https://escolamobile.instructure.com/courses/3168642/external_tools/1079745",
       },
       {
         name: "NC3 (Ponencia)",
         weight: 15,
+      },
+      {
+        name: "P3",
+        weight: 20,
       },
       {
         name: "IOP",
@@ -165,12 +159,14 @@ const templates: Templates = {
         url: "https://escolamobile.instructure.com/courses/3168642/external_tools/1079745",
       },
       {
-        name: "P2 (Redação)",
-        weight: 25,
-      },
-      {
         name: "AC2",
         weight: 5,
+        url: "https://escolamobile.instructure.com/courses/3168642/external_tools/1079745",
+      },
+      {
+        name: "P2 (Redação)",
+        weight: 25,
+        url: "https://escolamobile.instructure.com/courses/3168642/external_tools/1079745",
       },
       {
         name: "P3",
@@ -194,14 +190,12 @@ const templates: Templates = {
       {
         name: "NC2",
         weight: 5,
+        url: "https://escolamobile.instructure.com/courses/3168642/external_tools/1079745",
       },
       {
-        name: "P2 - Teste",
-        weight: 9,
-      },
-      {
-        name: "P2 - Dissertativa",
-        weight: 21,
+        name: "P2",
+        weight: 30,
+        url: "https://escolamobile.instructure.com/courses/3168642/external_tools/1079745",
       },
       {
         name: "NC3",
@@ -229,14 +223,12 @@ const templates: Templates = {
       {
         name: "NC2",
         weight: 5,
+        url: "https://escolamobile.instructure.com/courses/3168642/external_tools/1079745",
       },
       {
-        name: "P2 - Teste",
-        weight: 9,
-      },
-      {
-        name: "P2 - Dissertativa",
-        weight: 21,
+        name: "P2",
+        weight: 30,
+        url: "https://escolamobile.instructure.com/courses/3168642/external_tools/1079745",
       },
       {
         name: "NC3",
@@ -276,12 +268,9 @@ const templates: Templates = {
         url: "https://escolamobile.instructure.com/courses/3168642/external_tools/1079745",
       },
       {
-        name: "P2 - Teste",
-        weight: 5,
-      },
-      {
-        name: "P2 - Dissertativa",
-        weight: 10,
+        name: "P2",
+        weight: 15,
+        url: "https://escolamobile.instructure.com/courses/3168642/external_tools/1079745",
       },
       {
         name: "P3",
@@ -305,14 +294,12 @@ const templates: Templates = {
       {
         name: "NC2",
         weight: 5,
+        url: "https://escolamobile.instructure.com/courses/3168642/external_tools/1079745",
       },
       {
-        name: "P2 - Teste",
-        weight: 9,
-      },
-      {
-        name: "P2 - Dissertativa",
-        weight: 21,
+        name: "P2",
+        weight: 30,
+        url: "https://escolamobile.instructure.com/courses/3168642/external_tools/1079745",
       },
       {
         name: "NC3",
@@ -342,12 +329,9 @@ const templates: Templates = {
         weight: 5,
       },
       {
-        name: "P2 - Teste",
-        weight: 9,
-      },
-      {
-        name: "P2 - Dissertativa",
-        weight: 21,
+        name: "P2",
+        weight: 30,
+        url: "https://escolamobile.instructure.com/courses/3168642/external_tools/1079745",
       },
       {
         name: "NC3",
@@ -379,6 +363,7 @@ const templates: Templates = {
       {
         name: "P2",
         weight: 30,
+        url: "https://escolamobile.instructure.com/courses/3168642/external_tools/1079745",
       },
       {
         name: "NC3",

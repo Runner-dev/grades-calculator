@@ -27,7 +27,7 @@ describe("calculateMissingRequiredGrade.ts", () => {
       },
     ]);
 
-    expect(output).equal(-1.12);
+    expect(output).equal(0);
   });
 
   it("Calculates Positive Missing Grade Correctly", () => {
@@ -54,7 +54,7 @@ describe("calculateMissingRequiredGrade.ts", () => {
       },
     ]);
 
-    expect(output).equal(14.81);
+    expect(output).equal(14.74);
   });
 
   it("Calculates No Missing Grade Correctly", () => {

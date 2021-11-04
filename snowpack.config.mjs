@@ -45,7 +45,7 @@ export default {
     // "bundle": true,
   },
   packageOptions: {
-    /* ... */
+    knownEntrypoints: ["svelte/store"],
   },
 
   devOptions: {

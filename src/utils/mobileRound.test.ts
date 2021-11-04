@@ -13,23 +13,23 @@ describe("mobileRound.ts", () => {
 
     expect(output).equal(3.5);
   });
-  it("Rounds down until .76", () => {
-    const output = mobileRound(3.7555);
+  it("Rounds down until .75", () => {
+    const output = mobileRound(3.7499999);
 
     expect(output).equal(3.5);
   });
-  it("Rounds down until .26", () => {
-    const output = mobileRound(4.2555);
+  it("Rounds down until .25", () => {
+    const output = mobileRound(4.2499999);
 
     expect(output).equal(4);
   });
-  it("Rounds up after .76", () => {
-    const output = mobileRound(3.76);
+  it("Rounds up after .75", () => {
+    const output = mobileRound(3.75);
 
     expect(output).equal(4);
   });
-  it("Rounds up after .26", () => {
-    const output = mobileRound(4.26);
+  it("Rounds up after .25", () => {
+    const output = mobileRound(4.25);
 
     expect(output).equal(4.5);
   });

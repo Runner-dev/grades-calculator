@@ -19,10 +19,7 @@ export default function calculateMissingRequiredGrade(grades: Array<Grade>) {
 
   if (weight === 100) return 0;
 
-  const missingWeighted = 500 - value;
+  const missingWeighted = 475 - value;
 
-  if (missingWeighted / (100 - weight) > 0)
-    return Math.ceil((missingWeighted / (100 - weight)) * 100) / 100;
-
-  return Math.floor((missingWeighted / (100 - weight)) * 100) / 100;
+  return Math.max(Math.ceil((missingWeighted / (100 - weight)) * 100) / 100, 0);
 }
