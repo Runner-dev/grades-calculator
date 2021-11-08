@@ -10,7 +10,6 @@
     dispatch("delete");
   }
 
-  let inputValue: string = "";
   export let component: HTMLLIElement;
   export let editable = true;
   export let grade: Grade;
@@ -18,6 +17,8 @@
   export let missing: number;
   export let weightSum: number;
   export let index: number;
+
+  let inputValue: string = grade.value?.toString() || "";
 
   $: {
     let float = parseFloat(inputValue.replace(",", "."));
