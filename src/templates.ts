@@ -335,7 +335,11 @@ const templates: Templates = {
       },
       {
         name: "NC3",
-        weight: 5,
+        weight: 3,
+      },
+      {
+        name: "LAB",
+        weight: 2,
       },
       {
         name: "P3",
