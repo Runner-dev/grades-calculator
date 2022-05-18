@@ -107,7 +107,8 @@ const templates: Templates = {
       { name: "R3", weight: 10 },
       { name: "P3 Teste", weight: 5 },
       { name: "P3 Dissertativa", weight: 15 },
-      { name: "R4", weight: 20, unknown: true },
+      { name: "R4", weight: 15 },
+      { name: "Outros", weight: 5, unknown: true },
     ],
   },
   matematica: {
