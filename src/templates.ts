@@ -2,381 +2,148 @@ import type { Grade } from "./types/grades";
 
 interface Templates {
   [slug: string]: {
+    hasMnm?: boolean;
     name: string;
     grades: Array<Grade>;
   };
 }
 
 const templates: Templates = {
+  biologia: {
+    name: "Biologia",
+    grades: [
+      { name: "P1 Dissertativa", weight: 15 },
+      { name: "P1 Teste", weight: 10 },
+      { name: "Sondagem 1", weight: 5 },
+      { name: "P2 Disseratativa", weight: 15 },
+      { name: "P2 Teste", weight: 10 },
+      { name: "Sondagem 2", weight: 5 },
+      { name: "P3 Dissertativa", weight: 21 },
+      { name: "P3 Teste", weight: 14 },
+      { name: "Sondagem 3", weight: 5 },
+    ],
+  },
   "estudos-literarios": {
     name: "Estudos Literários",
+    hasMnm: true,
     grades: [
-      {
-        name: "NC1",
-        weight: 5,
-        url: "https://escolamobile.instructure.com/courses/3168642/external_tools/1079745",
-      },
-      {
-        name: "P1",
-        weight: 15,
-        url: "https://escolamobile.instructure.com/courses/3168642/external_tools/1079745",
-      },
-      {
-        name: "NC2",
-        weight: 5,
-        url: "https://escolamobile.instructure.com/courses/3168642/external_tools/1079745",
-      },
-      {
-        name: "P2",
-        weight: 30,
-        url: "https://escolamobile.instructure.com/courses/3168642/external_tools/1079745",
-      },
-      {
-        name: "NC3",
-        weight: 5,
-      },
-      {
-        name: "P3",
-        weight: 40,
-      },
+      { name: "LT1", weight: 5 },
+      { name: "P1 Dissertativa", weight: 12 },
+      { name: "P1 Teste", weight: 8 },
+      { name: "LT2", weight: 5 },
+      { name: "Seminário MNM", weight: 4 },
+      { name: "P2 Disseratativa", weight: 14 },
+      { name: "P2 Teste", weight: 10 },
+      { name: "Sondagem 3", weight: 5 },
+      { name: "P3 Teste", weight: 10 },
+      { name: "P3 Dissertativa", weight: 16 },
+      { name: "Site MNM", weight: 5 },
+      { name: "Doc MNM", weight: 6 },
+    ],
+  },
+  "etica-cidadania": {
+    name: "Ética e Cidadania",
+    grades: [
+      { name: "P1 Dissertativa", weight: 15 },
+      { name: "P1 Teste", weight: 10 },
+      { name: "Sondagem 1", weight: 5 },
+      { name: "P2 Redação", weight: 25 },
+      { name: "Sondagem 2", weight: 5 },
+      { name: "P3 Dissertativa", weight: 25 },
+      { name: "P3 Teste", weight: 10 },
+      { name: "Sondagem 3", weight: 5 },
+    ],
+  },
+  filososfia: {
+    name: "Filosofia",
+    grades: [
+      { name: "P1 Redação", weight: 25 },
+      { name: "Sondagem 1", weight: 5 },
+      { name: "P2 Dissertativa", weight: 15 },
+      { name: "Seminário MNM", weight: 5 },
+      { name: "P3 Redação", weight: 25 },
+      { name: "Site MNM", weight: 8 },
+      { name: "Doc MNM", weight: 17 },
     ],
   },
   fisica: {
     name: "Física",
     grades: [
-      {
-        name: "NC1",
-        weight: 5,
-        url: "https://escolamobile.instructure.com/courses/3168642/external_tools/1079745",
-      },
-      {
-        name: "P1",
-        weight: 15,
-        url: "https://escolamobile.instructure.com/courses/3168642/external_tools/1079745",
-      },
-      {
-        name: "NC2",
-        weight: 5,
-        url: "https://escolamobile.instructure.com/courses/3168642/external_tools/1079745",
-      },
-      {
-        name: "P2",
-        weight: 30,
-        url: "https://escolamobile.instructure.com/courses/3168642/external_tools/1079745",
-      },
-      {
-        name: "NC3",
-        weight: 5,
-      },
-      {
-        name: "P3",
-        weight: 40,
-      },
-    ],
-  },
-  biologia: {
-    name: "Biologia",
-    grades: [
-      {
-        name: "NC1",
-        weight: 5,
-        url: "https://escolamobile.instructure.com/courses/3168642/external_tools/1079745",
-      },
-      {
-        name: "P1",
-        weight: 15,
-        url: "https://escolamobile.instructure.com/courses/3168642/external_tools/1079745",
-      },
-      {
-        name: "NC2",
-        weight: 5,
-        url: "https://escolamobile.instructure.com/courses/3168642/external_tools/1079745",
-      },
-      {
-        name: "P2",
-        weight: 30,
-        url: "https://escolamobile.instructure.com/courses/3168642/external_tools/1079745",
-      },
-      {
-        name: "NC3",
-        weight: 5,
-      },
-      {
-        name: "P3",
-        weight: 40,
-      },
-    ],
-  },
-  espanhol: {
-    name: "Espanhol",
-    grades: [
-      {
-        name: "NC1 (Sondeo)",
-        weight: 10,
-        url: "https://escolamobile.instructure.com/courses/3168642/external_tools/1079745",
-      },
-      {
-        name: "P1",
-        weight: 15,
-        url: "https://escolamobile.instructure.com/courses/3168642/external_tools/1079745",
-      },
-      {
-        name: "NC2 (EOLP)",
-        weight: 15,
-        url: "https://escolamobile.instructure.com/courses/3168642/external_tools/1079745",
-      },
-      {
-        name: "P2",
-        weight: 20,
-        url: "https://escolamobile.instructure.com/courses/3168642/external_tools/1079745",
-      },
-      {
-        name: "NC3 (Ponencia)",
-        weight: 15,
-      },
-      {
-        name: "P3",
-        weight: 20,
-      },
-      {
-        name: "IOP",
-        weight: 5,
-        helper: "Interacción oral periódica",
-      },
-    ],
-  },
-  "etica-cidadania": {
-    name: "Ética e cidadania",
-    grades: [
-      {
-        name: "AC1",
-        weight: 10,
-        url: "https://escolamobile.instructure.com/courses/3168642/external_tools/1079745",
-      },
-      {
-        name: "P1",
-        weight: 20,
-        url: "https://escolamobile.instructure.com/courses/3168642/external_tools/1079745",
-      },
-      {
-        name: "AC2",
-        weight: 5,
-        url: "https://escolamobile.instructure.com/courses/3168642/external_tools/1079745",
-      },
-      {
-        name: "P2 (Redação)",
-        weight: 25,
-        url: "https://escolamobile.instructure.com/courses/3168642/external_tools/1079745",
-      },
-      {
-        name: "P3",
-        weight: 40,
-      },
-    ],
-  },
-  geografia: {
-    name: "Geografia",
-    grades: [
-      {
-        name: "NC1",
-        weight: 5,
-        url: "https://escolamobile.instructure.com/courses/3168642/external_tools/1079745",
-      },
-      {
-        name: "P1",
-        weight: 15,
-        url: "https://escolamobile.instructure.com/courses/3168642/external_tools/1079745",
-      },
-      {
-        name: "NC2",
-        weight: 5,
-        url: "https://escolamobile.instructure.com/courses/3168642/external_tools/1079745",
-      },
-      {
-        name: "P2",
-        weight: 30,
-        url: "https://escolamobile.instructure.com/courses/3168642/external_tools/1079745",
-      },
-      {
-        name: "NC3",
-        weight: 5,
-      },
-      {
-        name: "P3",
-        weight: 40,
-      },
+      { name: "P1 Dissertativa", weight: 15 },
+      { name: "P1 Teste", weight: 10 },
+      { name: "Sondagem 1", weight: 6 },
+      { name: "P2 Disseratativa", weight: 15 },
+      { name: "P2 Teste", weight: 10 },
+      { name: "Sondagem 2", weight: 7 },
+      { name: "P3 Dissertativa", weight: 18 },
+      { name: "P3 Teste", weight: 12 },
+      { name: "Sondagem 3", weight: 7 },
     ],
   },
   historia: {
     name: "História",
     grades: [
-      {
-        name: "NC1",
-        weight: 5,
-        url: "https://escolamobile.instructure.com/courses/3168642/external_tools/1079745",
-      },
-      {
-        name: "P1",
-        weight: 15,
-        url: "https://escolamobile.instructure.com/courses/3168642/external_tools/1079745",
-      },
-      {
-        name: "NC2",
-        weight: 5,
-        url: "https://escolamobile.instructure.com/courses/3168642/external_tools/1079745",
-      },
-      {
-        name: "P2",
-        weight: 30,
-        url: "https://escolamobile.instructure.com/courses/3168642/external_tools/1079745",
-      },
-      {
-        name: "NC3",
-        weight: 5,
-      },
-      {
-        name: "P3",
-        weight: 40,
-      },
+      { name: "P1 Teste", weight: 5 },
+      { name: "P1 Dissertativa", weight: 10 },
+      { name: "Sondagem 1", weight: 3 },
+      { name: "P2 Disseratativa", weight: 10 },
+      { name: "P2 Teste", weight: 5 },
+      { name: "P3 Teste", weight: 15.25, unknown: true },
+      { name: "P3 Dissertativa", weight: 15.25, unknown: true },
+      { name: "Seminário MNM", weight: 6 },
+      { name: "Site MNM", weight: 15.25, unknown: true },
+      { name: "Doc MNM", weight: 15.25, unknown: true },
     ],
   },
   "lingua-producao": {
-    name: "Língua e Produção",
+    name: "Língua e produção",
     grades: [
-      {
-        name: "R1 (Crônica)",
-        weight: 8,
-        url: "https://escolamobile.instructure.com/courses/3168651/assignments/33513510",
-      },
-      {
-        name: "R2 (Crônica)",
-        weight: 12,
-        url: "https://escolamobile.instructure.com/courses/3168651/assignments/33723711",
-      },
-      {
-        name: "R3 (Roteiro Podcast)",
-        weight: 8,
-        url: "https://escolamobile.instructure.com/courses/3168651/assignments/34408130",
-      },
-      {
-        name: "R4 (Entrega Podcast)",
-        weight: 20,
-      },
-      {
-        name: "P1",
-        weight: 12,
-        url: "https://escolamobile.instructure.com/courses/3168642/external_tools/1079745",
-      },
-      {
-        name: "P2",
-        weight: 15,
-        url: "https://escolamobile.instructure.com/courses/3168642/external_tools/1079745",
-      },
-      {
-        name: "P3",
-        weight: 25,
-      },
+      { name: "P1 Dissertativa", weight: 10 },
+      { name: "P1 Teste", weight: 5 },
+      { name: "R1", weight: 10 },
+      { name: "R2", weight: 10 },
+      { name: "P2 Disseratativa", weight: 10 },
+      { name: "P2 Teste", weight: 5 },
+      { name: "R3", weight: 10 },
+      { name: "P3 Teste", weight: 5 },
+      { name: "P3 Dissertativa", weight: 15 },
+      { name: "R4", weight: 20, unknown: true },
     ],
   },
   matematica: {
     name: "Matemática",
     grades: [
-      {
-        name: "NC1",
-        weight: 5,
-        url: "https://escolamobile.instructure.com/courses/3168642/external_tools/1079745",
-      },
-      {
-        name: "P1",
-        weight: 15,
-        url: "https://escolamobile.instructure.com/courses/3168642/external_tools/1079745",
-      },
-      {
-        name: "NC2",
-        weight: 5,
-        url: "https://escolamobile.instructure.com/courses/3168642/external_tools/1079745",
-      },
-      {
-        name: "P2",
-        weight: 30,
-        url: "https://escolamobile.instructure.com/courses/3168642/external_tools/1079745",
-      },
-      {
-        name: "NC3",
-        weight: 5,
-      },
-      {
-        name: "P3",
-        weight: 40,
-      },
+      { name: "P1 Dissertativa", weight: 15 },
+      { name: "P1 Teste", weight: 10 },
+      { name: "Sondagem 1", weight: 5 },
+      { name: "Sondagem 2", weight: 2 },
+      { name: "P2 Disseratativa", weight: 15 },
+      { name: "P2 Teste", weight: 10 },
+      { name: "Sondagem 3", weight: 2 },
+      { name: "Sondagem 4", weight: 5 },
+      { name: "P3 Teste", weight: 12 },
+      { name: "P3 Dissertativa", weight: 18 },
     ],
   },
   quimica: {
     name: "Química",
     grades: [
-      {
-        name: "NC1",
-        weight: 5,
-        url: "https://escolamobile.instructure.com/courses/3168642/external_tools/1079745",
-      },
-      {
-        name: "P1",
-        weight: 15,
-        url: "https://escolamobile.instructure.com/courses/3168642/external_tools/1079745",
-      },
-      {
-        name: "NC2",
-        weight: 5,
-      },
-      {
-        name: "P2",
-        weight: 30,
-        url: "https://escolamobile.instructure.com/courses/3168642/external_tools/1079745",
-      },
-      {
-        name: "NC3",
-        weight: 3,
-      },
-      {
-        name: "LAB",
-        weight: 2,
-      },
-      {
-        name: "P3",
-        weight: 40,
-      },
-    ],
-  },
-  "ingles-i1": {
-    name: "Inglês (I1)",
-    grades: [
-      {
-        name: "NC1",
-        weight: 5,
-        url: "https://escolamobile.instructure.com/courses/3168642/external_tools/1079745",
-      },
-      {
-        name: "P1",
-        weight: 15,
-        url: "https://escolamobile.instructure.com/courses/3168642/external_tools/1079745",
-      },
-      {
-        name: "NC2",
-        weight: 5,
-      },
-      {
-        name: "P2",
-        weight: 30,
-        url: "https://escolamobile.instructure.com/courses/3168642/external_tools/1079745",
-      },
-      {
-        name: "NC3",
-        weight: 5,
-      },
-      {
-        name: "P3",
-        weight: 40,
-      },
+      { name: "Laboratório 1", weight: 2 },
+      { name: "Laboratório 2", weight: 2 },
+      { name: "Laboratório 3", weight: 2 },
+      { name: "P1 Dissertativa", weight: 15 },
+      { name: "P1 Teste", weight: 10 },
+      { name: "Sondagem 1", weight: 2 },
+      { name: "Laboratório 4", weight: 2 },
+      { name: "P2 Disseratativa", weight: 15 },
+      { name: "P2 Teste", weight: 10 },
+      { name: "Sondagem 2", weight: 2 },
+      { name: "P3 Teste", weight: 12 },
+      { name: "P3 Dissertativa", weight: 18 },
+      { name: "Sondagem 3", weight: 2 },
+      { name: "Laboratório 5", weight: 2 },
+      { name: "Laboratório 6", weight: 2 },
+      { name: "Laboratório 7", weight: 2 },
     ],
   },
 };

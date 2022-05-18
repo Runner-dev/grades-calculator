@@ -6,4 +6,5 @@ export interface Grade {
   helper?: string;
   url?: string;
   multiplier?: number;
+  unknown?: boolean;
 }

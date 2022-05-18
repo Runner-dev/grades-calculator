@@ -64,7 +64,7 @@
   }, -1);
 </script>
 
-<ul class="max-w-4xl px-4 mt-6 mx-auto space-y-8 z-0">
+<ul class="z-0 max-w-4xl px-4 mx-auto mt-6 space-y-8">
   {#each grades as grade, i (grade.id || i)}
     <GradeComponent
       on:delete={() => onDelete(i)}
@@ -80,7 +80,7 @@
 </ul>
 <div class="h-32" />
 <div
-  class="fixed flex bottom-0 left-0 right-0 p-4 space-x-4 py-5 dark:bg-gray-900 bg-gray-300 items-center"
+  class="fixed bottom-0 left-0 right-0 flex items-center p-4 py-5 space-x-4 bg-gray-300 dark:bg-gray-900"
 >
   <div
     class="flex-grow flex items-center justify-center bg-gray-100 dark:bg-gray-800 dark:text-white rounded-md h-12 shadow-sm min-w-[min-content] font-semibold"
