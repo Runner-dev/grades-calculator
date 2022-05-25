@@ -139,6 +139,7 @@ const templates: Templates = {
       { name: "Sondagem 4", weight: 5 },
       { name: "P3 Teste", weight: 12 },
       { name: "P3 Dissertativa", weight: 18 },
+      { name: "Outros", weight: 6, unknown: true },
     ],
   },
   quimica: {

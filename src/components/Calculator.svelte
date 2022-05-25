@@ -87,7 +87,7 @@
   >
     Média: {average}
   </div>
-  {#if weightSum !== 100}
+  {#if weightSum !== 100 && editable}
     <div
       class="flex-grow flex items-center justify-center bg-gray-100 dark:bg-gray-800 dark:text-white text-black rounded-md shadow-sm h-12 min-w-[min-content] font-semibold"
     >

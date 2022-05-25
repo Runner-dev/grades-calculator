@@ -1,3 +1,3 @@
 export default function mobileRound(val: number) {
-  return val;
+  return Math.floor(val * 100) / 100;
 }
