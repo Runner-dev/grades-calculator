@@ -72,7 +72,7 @@
       class="w-full p-2 bg-gray-100 rounded shadow-sm dark:bg-gray-600 focus:outline-none focus:ring-4"
       bind:value={inputValue}
       placeholder={missing.toString()}
-      disabled={grade.unknown}
+      disabled={grade.unknown || grade.disabled}
       min="0"
       max="10"
     />

@@ -14,13 +14,12 @@ const templates: Templates = {
     grades: [
       { name: "P1 Dissertativa", weight: 15 },
       { name: "P1 Teste", weight: 10 },
-      { name: "Sondagem 1", weight: 5 },
+      { name: "Sondagem 1", weight: 7 },
       { name: "P2 Disseratativa", weight: 15 },
       { name: "P2 Teste", weight: 10 },
-      { name: "Sondagem 2", weight: 5 },
-      { name: "P3 Dissertativa", weight: 21 },
-      { name: "P3 Teste", weight: 14 },
-      { name: "Sondagem 3", weight: 5 },
+      { name: "Sondagem 2", weight: 6 },
+      { name: "P3", weight: 30, disabled: true },
+      { name: "Outros", weight: 7, disabled: true },
     ],
   },
   "estudos-literarios": {
@@ -80,6 +79,22 @@ const templates: Templates = {
       { name: "Sondagem 3", weight: 7 },
     ],
   },
+  geografia: {
+    name: "Geografia",
+    grades: [
+      { name: "P1 Dissertativa", weight: 15 },
+      { name: "P1 Teste", weight: 5 },
+      { name: "Sondagem 1", weight: 3 },
+      { name: "Seminário MNM", weight: 5 },
+      { name: "P2 Disseratativa", weight: 15 },
+      { name: "P2 Teste", weight: 10 },
+      { name: "Sondagem 2", weight: 2 },
+      { name: "P3 Dissertativa", weight: 25, disabled: true },
+      { name: "P3 Teste", weight: 10, disabled: true },
+      { name: "MNM Documentário", weight: 5, disabled: true },
+      { name: "MNM Site", weight: 5, disabled: true },
+    ],
+  },
   historia: {
     name: "História",
     grades: [
@@ -108,7 +123,7 @@ const templates: Templates = {
       { name: "P3 Teste", weight: 5 },
       { name: "P3 Dissertativa", weight: 15 },
       { name: "R4", weight: 15 },
-      { name: "Outros", weight: 5, unknown: true },
+      { name: "MNM Site", weight: 5 },
     ],
   },
   matematica: {

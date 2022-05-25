@@ -7,4 +7,5 @@ export interface Grade {
   url?: string;
   multiplier?: number;
   unknown?: boolean;
+  disabled?: boolean;
 }
