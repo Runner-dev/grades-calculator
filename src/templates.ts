@@ -18,8 +18,9 @@ const templates: Templates = {
       { name: "P2 Disseratativa", weight: 15 },
       { name: "P2 Teste", weight: 10 },
       { name: "Sondagem 2", weight: 6 },
-      { name: "P3", weight: 30, disabled: true },
-      { name: "Outros", weight: 7, disabled: true },
+      { name: "P3 Teste", weight: 10 },
+      { name: "P3 Dissertativa", weight: 20 },
+      { name: "Sondagem 3", weight: 7 },
     ],
   },
   "estudos-literarios": {
@@ -139,7 +140,8 @@ const templates: Templates = {
       { name: "Sondagem 4", weight: 5 },
       { name: "P3 Teste", weight: 12 },
       { name: "P3 Dissertativa", weight: 18 },
-      { name: "Outros", weight: 6, unknown: true },
+      { name: "Sondagem 5", weight: 3 },
+      { name: "Sondagem 6", weight: 3 },
     ],
   },
   quimica: {
