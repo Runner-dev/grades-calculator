@@ -3,8 +3,8 @@
     "start": "snowpack dev",
     "build": "snowpack build",
     "test": "web-test-runner \"src/**/*.test.ts\" --polyfill-node",
-    "deploy": "npm run build && firebase deploy --only hosting",
-    "channel": "firebase hosting:channel:deploy 2a1sem"
+    "deploy": "firebase deploy --only hosting",
+    "channel": "firebase hosting:channel:deploy 2a2sem"
   },
   "dependencies": {
     "@babel/plugin-transform-runtime": "^7.14.3",

@@ -8,7 +8,7 @@
   export let params: any;
 
   let templateId = params.templateId;
-  let dataString = localStorage.getItem(`grades-${templateId}-2a1s`);
+  let dataString = localStorage.getItem(`grades-${templateId}-2a2s`);
 
   if (!isDev())
     logEvent(getAnalytics(), "view_template", {
@@ -17,6 +17,8 @@
     });
 
   let template = templates[templateId];
+
+  console.log("dataString", dataString);
 
   if (dataString) {
     const data = JSON.parse(dataString);
@@ -28,10 +30,10 @@
   }
 
   console.log(template.grades.map((grade) => grade.value));
-  console.log(localStorage.getItem(`grades-${templateId}-2a1s`));
+  console.log(localStorage.getItem(`grades-${templateId}-2a2s`));
 
   $: localStorage.setItem(
-    `grades-${templateId}-2a1s`,
+    `grades-${templateId}-2a2s`,
     JSON.stringify(template.grades.map((grade) => grade.value))
   );
 </script>

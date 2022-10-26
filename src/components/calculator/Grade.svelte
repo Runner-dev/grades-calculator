@@ -19,6 +19,9 @@
   export let weightSum: number;
   export let index: number;
 
+  let minimum: number = 0;
+  $: minimum = grade.regression ? Math.max(missing, 3.5) : missing;
+
   let inputValue: string = grade.value?.toString() || "";
 
   $: {
@@ -71,7 +74,7 @@
       type="text"
       class="w-full p-2 bg-gray-100 rounded shadow-sm dark:bg-gray-600 focus:outline-none focus:ring-4"
       bind:value={inputValue}
-      placeholder={missing.toString()}
+      placeholder={minimum.toString()}
       disabled={grade.unknown || grade.disabled}
       min="0"
       max="10"

@@ -8,4 +8,5 @@ export interface Grade {
   multiplier?: number;
   unknown?: boolean;
   disabled?: boolean;
+  regression?: boolean;
 }
