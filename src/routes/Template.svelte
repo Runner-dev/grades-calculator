@@ -8,7 +8,7 @@
   export let params: any;
 
   let templateId = params.templateId;
-  let dataString = localStorage.getItem(`grades-${templateId}-2a2s`);
+  let dataString = localStorage.getItem(`grades-${templateId}-3a1s`);
 
   if (!isDev())
     logEvent(getAnalytics(), "view_template", {
@@ -28,9 +28,6 @@
       value: data[index] || grade.value,
     }));
   }
-
-  console.log(template.grades.map((grade) => grade.value));
-  console.log(localStorage.getItem(`grades-${templateId}-2a2s`));
 
   $: localStorage.setItem(
     `grades-${templateId}-2a2s`,
