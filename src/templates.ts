@@ -20,6 +20,19 @@ const templates: Templates = {
       { name: "P3 - Dissertativa", weight: 20 },
     ],
   },
+  "etica-cidadania": {
+    name: "Ética e Cidadania",
+    grades: [
+      { name: "S1", weight: 5 },
+      { name: "P1 - Teste", weight: 10 },
+      { name: "P1 - Dissertativa", weight: 15 },
+      { name: "S2", weight: 5 },
+      { name: "P2", weight: 25 },
+      { name: "S3", weight: 5 },
+      { name: "P3 - Teste", weight: 10 },
+      { name: "P3 - Dissertativa", weight: 15 },
+    ],
+  },
   filosofia: {
     name: "Filosofia",
     grades: [
