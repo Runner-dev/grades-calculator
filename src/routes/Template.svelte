@@ -6,9 +6,10 @@
   import isDev from "../utils/isDev";
 
   export let params: any;
+  const key = '3a2s';
 
   let templateId = params.templateId;
-  let dataString = localStorage.getItem(`grades-${templateId}-3a1s`);
+  let dataString = localStorage.getItem(`grades-${templateId}-${key}`);
 
   if (!isDev())
     logEvent(getAnalytics(), "view_template", {
@@ -18,7 +19,6 @@
 
   let template = templates[templateId];
 
-  console.log("dataString", dataString);
 
   if (dataString) {
     const data = JSON.parse(dataString);
@@ -30,7 +30,7 @@
   }
 
   $: localStorage.setItem(
-    `grades-${templateId}-2a2s`,
+    `grades-${templateId}-${key}`,
     JSON.stringify(template.grades.map((grade) => grade.value))
   );
 </script>
