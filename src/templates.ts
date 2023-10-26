@@ -118,7 +118,7 @@ const templates: Templates = {
       { name: "S5", weight: 8 },
       { name: "P5 - Geral", weight: 5 },
       { name: "P5 - Específica", weight: 15 },
-      { name: "S6", weight: 8 },
+      { name: "S6", weight: 9 },
       { name: "P6", weight: 30 },
     ],
   },
